@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.result {
+  color: #20c200;
+}
+
+.error {
+  color: #ff3d3d;
+}
+
+.container {
+  padding: 50px;
+}
+
+.title {
+  text-align: center;
+}
+
+.auth {
+  margin: 20px 0;
+  text-align: center;
+}
+
+section {
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px;
+
+  border: 2px #c0c0c0 solid;
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  align-items: end;
+  gap: 50px;
+
+  margin: 20px 0;
+}
+
+.card {
+  border: 1px #000 solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.card p {
+  font-size: 18px;
+}
+
+button {
+  min-width: 100px;
+  height: 40px;
+
+  font-family: inherit;
+
+  background-color: #dadada;
+  border: 1px #222222 solid;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  padding: 10px;
+
+  transition: 0.2s all ease;
+}
+
+button:hover {
+  background-color: #a1a1a1;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.form-group input {
+  width: 250px;
+  height: 40px;
+
+  font-size: 16px;
+
+  border: 1px #000 solid;
+  border-radius: 5px;
+
+  padding: 5px 10px;
+}
+
+.form-group label {
+  font-size: 14px;
+}
+
+.history {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
