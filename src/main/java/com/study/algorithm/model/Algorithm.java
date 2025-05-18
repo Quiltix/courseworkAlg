@@ -2,13 +2,19 @@ package com.study.algorithm.model;
 
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+import org.springframework.security.crypto.encrypt.Encryptors;
+
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Algorithm {
 
     @Id
@@ -20,7 +26,12 @@ public class Algorithm {
 
     private String substring;
 
+    @ElementCollection
+    private List<Integer> result;
+
     @ManyToOne
-    @JoinColumn(name = "User_id")
-    private String owner;
+    @JsonIgnore
+    @JoinColumn(name = "owner_id")
+    private User owner;
+
 }
