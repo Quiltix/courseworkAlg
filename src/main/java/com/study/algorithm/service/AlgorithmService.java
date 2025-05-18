@@ -83,16 +83,10 @@ public class AlgorithmService {
     public List<Integer> calculateKMP(String text,String substring){
         int[] p = calculatePrefix(substring);
         List<Integer> result= new ArrayList<>();
-        int i = 0;
-        int j = 0;
+        int i = 0, j = 0;
         int n = text.length();
         int m = substring.length();
-        if (n < m) {
-            return result;
-        }
-        if (n==0 || m==0){
-            return result;
-        }
+        if (n < m || n==0 || m==0) { return result;}
         while (i<n){
             if (text.charAt(i) == substring.charAt(j)){
                 i++;
@@ -108,12 +102,9 @@ public class AlgorithmService {
                 }
                 else{
                     i++;
-                    if (i==n){
-                        break;
-                    }
+                    if (i==n){break;}
                 }
             }
-
         }
         return result;
     }
