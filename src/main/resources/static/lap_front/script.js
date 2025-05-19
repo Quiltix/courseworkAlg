@@ -144,6 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = await response.json();
             showResult(data);
+
             
         } catch (error) {
             console.error('Ошибка:', error);
