@@ -21,12 +21,13 @@ public class Algorithm {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
+    @Lob
+    @Column(columnDefinition = "TEXT")
     private String text;
 
     private String substring;
 
-    @ElementCollection
+
     private List<Integer> result;
 
     @ManyToOne
