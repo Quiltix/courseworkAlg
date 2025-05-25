@@ -37,7 +37,6 @@ public class CustomUserDetailsService implements UserDetailsService {
         }
 
         catch (UsernameNotFoundException e){
-            log.error("Не найдено user с логином {} {}", username, e.getMessage());
             return null;
         }
     }

@@ -4,16 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
 
-    // Переключение между вкладками
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const tabName = tab.dataset.tab;
 
-            // Обновляем активные вкладки
             tabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
 
-            // Показываем соответствующую форму
             forms.forEach(form => {
                 form.classList.remove('active');
                 if(form.id === `${tabName}Form`) {
@@ -23,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Обработка входа
     loginForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const errorElement = document.getElementById('loginError');
@@ -57,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Обработка регистрации
+
     registerForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const errorElement = document.getElementById('registerError');
@@ -92,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Если пользователь уже авторизован
     if(localStorage.getItem('token')) {
         window.location.href = '/';
     }
