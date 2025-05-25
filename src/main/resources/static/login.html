@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="auth-container">
+    <div class="auth-card glassmorphism">
+        <div class="tabs">
+            <button class="tab active" data-tab="login">Вход</button>
+            <button class="tab" data-tab="register">Регистрация</button>
+        </div>
+
+        <form id="loginForm" class="auth-form active">
+            <div class="input-group">
+                <label for="loginUsername">Логин</label>
+                <input type="text" id="loginUsername" required>
+            </div>
+
+            <div class="input-group">
+                <label for="loginPassword">Пароль</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+
+            <button type="submit" class="gradient-btn">Войти</button>
+            <div id="loginError" class="error-message"></div>
+        </form>
+
+        <form id="registerForm" class="auth-form">
+            <div class="input-group">
+                <label for="registerUsername">Логин</label>
+                <input type="text" id="registerUsername" required>
+            </div>
+
+            <div class="input-group">
+                <label for="registerPassword">Пароль</label>
+                <input type="password" id="registerPassword" required minlength="6">
+            </div>
+
+            <button type="submit" class="gradient-btn">Зарегистрироваться</button>
+            <div id="registerError" class="error-message"></div>
+        </form>
+    </div>
+</div>
+
+<script src="/auth.js"></script>
+</body>
+</html>

@@ -1,51 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <title>Поиск подстроки</title>
+    <title>Антиплагиат</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">Алгоритм поиска подстроки</h1>
+<div class="container">
+    <header class="header">
+        <h1 class="title">Антиплагиат</h1>
+        <button id="logout-btn" class="logout-btn">Выйти</button>
+    </header>
 
-        <div class="auth">
-            <button id="register-btn">Зарегистрироваться</button>
-            <button id="auth-btn">Войти</button>
-        </div>
-
-        <section class="section">
-            <h2 class="subtitle">Ввод данных:</h2>
-            
-            <form action="" class="form">
-                <div class="form-group">
-                    <label for="string">Текст:</label>
-                    <input type="text" id="string" placeholder="Введите строку">
+    <main class="main-content">
+        <section class="input-section glassmorphism">
+            <h2 class="section-title">Ввод данных</h2>
+            <form class="search-form">
+                <div class="input-group">
+                    <label for="string" class="input-label">Текст:</label>
+                    <input type="text" id="string" class="text-input" placeholder="Введите основную строку">
                 </div>
 
-                <div class="form-group">
-                    <label for="substring">Подстрока:</label>
-                    <input type="text" id="substring" placeholder="Введите подстроку">
+                <div class="input-group">
+                    <label for="substring" class="input-label">Подстрока:</label>
+                    <input type="text" id="substring" class="text-input" placeholder="Введите искомую подстроку">
                 </div>
 
-                <button id="submit-btn">Найти</button>
+                <button type="submit" class="submit-btn gradient-btn">Найти</button>
             </form>
 
-            <h3 id="result" class="result"></h3>
+            <div class="result-container">
+                <h3 class="result-title">Результат:</h3>
+                <div id="result" class="result-content"></div>
+            </div>
         </section>
 
-        <div class="history">
-            <section class="user-history" >
-                <h2 class="subtitle">История пользователя</h2>
+        <div class="history-container">
+            <section class="history-section glassmorphism">
+                <h2 class="section-title">История поиска</h2>
+                <div class="history-content" id="user-history"></div>
             </section>
-            <section class="all-history">
-                <h2 class="subtitle">Общая история</h2>
-            </section>    
+
+            <section class="history-section glassmorphism">
+                <h2 class="section-title">Общая история</h2>
+                <div class="history-content" id="all-history"></div>
+            </section>
         </div>
+    </main>
+</div>
 
-    </div>
-
-    <script src="script.js"></script>
+<script src="/script.js"></script>
 </body>
 </html>

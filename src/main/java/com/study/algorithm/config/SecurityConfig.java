@@ -40,7 +40,8 @@ public class SecurityConfig {
                                 "/style.css",
                                 "/script.js",
                                 "/swagger-ui/**",
-                                "/v3/api-docs/**"
+                                "/v3/api-docs/**",
+                                "/login"
                         ).permitAll()
 
                         .requestMatchers("/api/auth/**").permitAll()
